@@ -1,0 +1,28 @@
+.approaches {
+    height: 400px;
+}
+
+.approaches__header {
+    font-weight: 700;
+    font-size: var(--font-size-mid);
+
+    height: 30px;
+}
+
+.approaches__list {
+    height: 350px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+@media (width < 500px) {
+    .approaches {
+        height: 300px;
+    }
+
+    .approaches__list {
+        height: 250px;
+        width: 100%;
+        overflow-y: scroll;
+    }
+}

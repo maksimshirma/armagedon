@@ -1,0 +1,52 @@
+.main-image {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    width: 400px;
+    height: 620px;
+
+    z-index: -1;
+}
+
+@media (width >= 1200px) {
+    .main-image {
+        left: 0;
+    }
+}
+
+@media (width < 1200px) {
+    .main-image {
+        right: 800px;
+    }
+}
+
+@media (width < 1000px) {
+    .main-image {
+        right: 700px;
+    }
+}
+
+@media (width < 800px) {
+    .main-image {
+        right: 600px;
+    }
+}
+
+@media (width < 600px) {
+    .main-image {
+        right: 500px;
+    }
+}
+
+@media (width < 500px) {
+    .main-image {
+        right: 400px;
+    }
+}
+
+@media (width < 400px) {
+    .main-image {
+        right: 340px;
+    }
+}

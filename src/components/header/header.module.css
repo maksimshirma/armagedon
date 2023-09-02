@@ -1,0 +1,36 @@
+.header {
+    width: 375px;
+    height: 125px;
+
+    padding: 16px;
+}
+
+.header__title {
+    color: var(--orange-base);
+    font-family: "Passion One";
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.header__subtitle {
+    color: var(--white-base);
+    font-family: Helvetica;
+    font-size: var(--font-size-base);
+    line-height: 24px;
+}
+
+@media (width < 500px) {
+    .header {
+        width: 300px;
+        height: 110px;
+    }
+    .header__title {
+        font-size: 28px;
+        margin-bottom: 6px;
+    }
+
+    .header__subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

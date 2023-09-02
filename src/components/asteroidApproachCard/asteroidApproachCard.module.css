@@ -1,0 +1,78 @@
+.asteroid-approach {
+    padding: 10px;
+    box-sizing: border-box;
+
+    margin-bottom: 10px;
+}
+
+.asteroid-approach__header {
+    font-weight: 700;
+    font-size: var(--font-size-mid);
+
+    margin-bottom: 8px;
+}
+
+.asteroid-approach__description {
+    font-size: var(--font-size-base);
+    line-height: 20px;
+
+    margin-bottom: 10px;
+}
+
+.asteroid-approach__distance {
+    font-size: var(--font-size-base);
+
+    display: flex;
+    align-items: center;
+}
+
+.asteroid-approach__distance__values {
+    flex-grow: 1;
+
+    text-align: center;
+}
+
+.asteroid-approach__distance__values div {
+    margin: 5px;
+    border-bottom: 1px solid var(--white-base);
+    position: relative;
+}
+
+.asteroid-approach__distance__values div::before,
+.asteroid-approach__distance__values div::after {
+    content: "";
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-top: 2px solid var(--white-base);
+    border-right: 2px solid var(--white-base);
+
+    margin-right: 10px;
+}
+
+.asteroid-approach__distance__values div::before {
+    top: -6px;
+    left: 0;
+
+    transform: rotate(-135deg);
+}
+
+.asteroid-approach__distance__values div::after {
+    top: -6px;
+    right: -10px;
+
+    transform: rotate(45deg);
+}
+
+@media (width < 500px) {
+    .asteroid-approach__description {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .asteroid-approach__distance {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,56 @@
+:root {
+    --orange-base: #f86600;
+    --white-base: #fff;
+    --black-base: #000;
+
+    --font-size-base: 16px;
+    --font-size-mid: 20px;
+    --font-size-big: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    scrollbar-width: thin;
+    scrollbar-color: gray inherit;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: inherit;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+}
+
+button {
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background: var(--black-base);
+
+    height: 100vh;
+
+    position: relative;
+}
+
+.main {
+    font-family: "Helvetica", "sans-serif";
+
+    width: 100%;
+    height: calc(100% - 157px);
+}
+
+@media (width < 750px) {
+    .main {
+        height: calc(100% - 142px);
+    }
+}

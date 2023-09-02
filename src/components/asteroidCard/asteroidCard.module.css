@@ -1,0 +1,161 @@
+.asteroid {
+    width: fit-content;
+    height: fit-content;
+    font-family: "Helvetica";
+
+    padding-bottom: 20px;
+}
+
+.asteroid__header {
+    color: var(--white-base);
+
+    font-weight: 700;
+
+    font-size: var(--font-size-big);
+    line-height: 32px;
+
+    height: 32px;
+
+    margin-bottom: 8px;
+}
+
+.asteroid__info {
+    color: var(--white-base);
+
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.asteroid__miss__distance {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.asteroid__miss__distance div {
+    margin: 5px;
+    border-bottom: 1px solid var(--white-base);
+    position: relative;
+}
+
+.asteroid__miss__distance div::before,
+.asteroid__miss__distance div::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+
+    width: 5px;
+    height: 5px;
+
+    border-top: 1px solid var(--white-base);
+    border-right: 1px solid var(--white-base);
+
+    margin-right: 5px;
+}
+
+.asteroid__miss__distance div::before {
+    left: 0;
+
+    transform: rotate(-135deg);
+}
+
+.asteroid__miss__distance div::after {
+    right: -5px;
+
+    transform: rotate(45deg);
+}
+
+.asteroid__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.asteroid__description {
+    text-align: center;
+}
+
+.asteroid__description__name {
+    text-decoration: underline;
+    transition: all 0.3s;
+}
+
+.asteroid__description__name:hover {
+    cursor: pointer;
+    color: rgb(215, 221, 245);
+}
+
+.asteroid__description__diameter {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.asteroid__action {
+    display: flex;
+}
+
+.asteroid__button {
+    width: 110px;
+    height: 24px;
+
+    font-size: 11px;
+    color: var(--orange-base);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    padding: 2px 11px 2px 11px;
+    border-radius: 16px;
+
+    background-color: #f8660026;
+
+    cursor: pointer;
+
+    margin-right: 10px;
+
+    transition: 0.3s;
+}
+
+.asteroid__button:hover {
+    background-color: var(--orange-base);
+    color: var(--white-base);
+}
+
+.asteroid__hazardous {
+    color: #e3e5e5;
+
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.asteroid__hazardous span {
+    color: yellow;
+}
+
+@media (width < 500px) {
+    .asteroid__header {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .asteroid__description__diameter {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .asteroid__button {
+        width: 100px;
+        height: 20px;
+
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .asteroid__hazardous {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
