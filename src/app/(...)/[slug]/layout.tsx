@@ -1,12 +1,4 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "",
-    description:
-        "онлайн-сервис по мониторингу и уничтожению опасных астероидов",
-};
-
-export default function RootLayout({
+export default function AsteroidLayout({
     children,
 }: {
     children: React.ReactNode;

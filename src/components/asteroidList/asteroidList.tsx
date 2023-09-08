@@ -4,7 +4,7 @@ import AsteroidListHeader from "../asteroidListHeader/asteroidListHeader";
 import Loader from "../loader/loader";
 import { IPartAsteroid } from "@/types/asteroid";
 import styles from "./asteroidList.module.css";
-import Error from "../error/error";
+import ErrorComponent from "../error/error";
 
 interface IProps {
     cart: { [id: number]: IPartAsteroid };
@@ -47,7 +47,7 @@ const AsteroidList = ({
                     );
                 })
             ) : (
-                <Error message={error || ""} />
+                <ErrorComponent message={error || ""} />
             )}
             {isLoading && (
                 <div className={styles["loader-container"]}>
