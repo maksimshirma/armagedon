@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>Armagedon</h1>
 
-## Getting Started
+Данный проект является учебным. Главная цель - попрактиковаться в работе с Next.js и отточить навыки в TypeScript.
 
-First, run the development server:
+Сайт представляет собой онлайн-сервис по мониторингу и уничтожению опасных астероидов на основе данных API NASA.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+API: https://api.nasa.gov
+
+В проекте было реализовано:
+- подгрузка контента при скролле
+- SSR на одной из страниц
+- кеширование с помощью sessionStorage
+- адаптивная вёрстка
+- полная типизация всех функций и компонентов
+
+В данном проекте я столкнулся с одной неприятной проблемой. Реализация SSR на странице, на которой осуществляется подгрузка контента при скролле. Данная задача нетривиальная, т.к. для динамической пагинации требуется использование состояния компонента, которое при ssr невозможно. Поэтому я отказался от SSR на главной странице.
+
+<h2>Демо</h2>
+
+Сайт состоит из 3 страниц.
+
+На первой, главной странице представляется список приближений астероидов, который динамически подгружается при скролле. У астероидов можно менять систему исчисления дистанции до земли, в лунных орбитах или в километрах, в хедэре данного списка. Также при нажатии на имя астероида, будет открыта страница данного астероида с его краткой информацией и списком всех его приближений. Также, при нажатии на кнопку "заказать", астероид будет добавлен в корзину. При нажатии на кнопку "отправить", будет открыта страница корзины, корзина очистится.
+
+Главная страница
+
+![image](https://github.com/maksimshirma/armagedon/assets/110569339/d42fc266-166e-40cb-b4b9-3fa8b6d06c4c)
+
+Страница астероида
+
+![image](https://github.com/maksimshirma/armagedon/assets/110569339/d109b78e-4a2d-4342-adc8-ada1b8fc3258)
+
+Страница корзины
+
+![image](https://github.com/maksimshirma/armagedon/assets/110569339/57517960-dbf8-40b6-8978-625f814d76d7)
+
+<h2>Технологии</h2>
+
+- Next.js
+- TypeScript
+- create-next-app
+- css modules
+- ESlint, Prettier
+
+<h2>Установка</h2>
+
+Для того, чтобы запустить проект, необходимо склонировать репозиторий:
+
+```
+git clone https://github.com/ChernoSlava/burgers-next.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+После понадобится установить зависимости:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Далее необходимо ввести следующую команду:
 
-## Learn More
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+После чего можно заходить на localhost:3000.
